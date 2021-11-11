@@ -9,11 +9,26 @@ body {
     background-color: white;
 }
 
+.divide {
+    height: 0;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.main {
+    padding-top: 37px;
+}
+
 .header {
     display:flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
+    box-sizing:border-box;
+    width:100%;
+    position:fixed;
+    top: 0;
+    background-color: #f2f2f2;
 }
 
 #logo {
@@ -26,7 +41,7 @@ body {
     display:flex;
 }
 
-#links a {
+.header a {
     text-decoration: none;
     color: #0e0e0e;
     transition: text-decoration 1s;
@@ -37,15 +52,15 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0px;
+    padding: 150px 0px 100px 0px;
     margin: 0px 10%;
-    border-bottom: solid #1f1f1f 5px;
+    border-bottom: solid black 5px;
 }
 
 .hero .divtext {
     text-align: left;
     width:45%;
-    padding: 0px 10px;
+    padding-right: 50px;
 }
 
 h1 {
@@ -84,10 +99,9 @@ h2 {
     height: 350px;
     width: 350px;
     padding: 10px;
-    opacity: 80%;
     object-fit: cover;
 }
-.imagegrid > div {
+.imagegrid .imggridtext {
     height: 350px;
     width: 350px;
     text-align: left;
@@ -95,4 +109,27 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.overlay {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width:100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.photo {
+    height:350px;
+    width: 350px;
+    padding:10px;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
 }
